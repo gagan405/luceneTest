@@ -30,7 +30,7 @@ public class TestLuceneSearcher {
     parts.add(new Part("Steering Wheel 2", "We need this as well"));
     luceneSearcher.createPartIndex(parts);
 
-    List<Part> results = luceneSearcher.prefixSearchByPartName("ste");
+    List<Part> results = luceneSearcher.prefixSearchByPartName("sTe");
     Assert.assertTrue(results.size() == 2);
   }
 

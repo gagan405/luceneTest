@@ -73,7 +73,7 @@ public class LuceneSearcher {
       throws Exception {
     IndexSearcher searcher = createSearcher();
 
-    Term term = new Term("partName", partName);
+    Term term = new Term("partName", partName.toLowerCase());
     Query query = new PrefixQuery(term);
 
     return createPartsFromHits(searcher, searcher.search(query, Integer.MAX_VALUE).scoreDocs);
